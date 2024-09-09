@@ -1,241 +1,388 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 string p1;
 string p2;
+int inp;
 int counter = 0;
-char mark;
-char game[3][3] = {{'1', '2', '3'},
-                   {'4', '5', '6'},
-                   {'7', '8', '9'}};
+char arr[3][3] = {{'1', '2', '3'},
+                  {'4', '5', '6'},
+                  {'7', '8', '9'}};
 
 void display()
 {
-    cout << " -------------" << endl;
-    cout << " | " << game[0][0] << " | " << game[0][1] << " | " << game[0][2] << " | " << endl;
-    cout << " -------------" << endl;
-    cout << " | " << game[1][0] << " | " << game[1][1] << " | " << game[1][2] << " | " << endl;
-    cout << " -------------" << endl;
-    cout << " | " << game[2][0] << " | " << game[2][1] << " | " << game[2][2] << " | " << endl;
-    cout << " -------------" << endl;
+    cout << " ----------- " << "\n";
+    cout << "| " << arr[0][0] << " | " << arr[0][1] << " | " << arr[0][2] << " |" << "\n";
+    cout << " ----------- " << "\n";
+    cout << "| " << arr[1][0] << " | " << arr[1][1] << " | " << arr[1][2] << " |" << "\n";
+    cout << " -----------" << "\n";
+    cout << "| " << arr[2][0] << " | " << arr[2][1] << " | " << arr[2][2] << " |" << "\n";
+    cout << " -----------" << "\n";
 }
-void tick(int n, char mark)
+
+void generat(int inp)
 {
-    switch (n)
+    switch (inp)
     {
     case 1:
-        if (game[0][0] == '1')
+        if (counter % 2 == 0)
         {
-            game[0][0] = mark;
-            counter++;
+            if (arr[0][0] == '1')
+            {
+                arr[0][0] = 'O';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
+        }
+        else
+        {
+            if (arr[0][0] == '1')
+            {
+                arr[0][0] = 'X';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
         }
         break;
     case 2:
-        if (game[0][1] == '2')
+        if (counter % 2 == 0)
         {
-            game[0][1] = mark;
-            counter++;
+            if (arr[0][1] == '2')
+            {
+                arr[0][1] = 'O';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
+        }
+        else
+        {
+            if (arr[0][1] == '2')
+            {
+                arr[0][1] = 'X';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
         }
         break;
     case 3:
-        if (game[0][2] == '3')
+        if (counter % 2 == 0)
         {
-            game[0][2] = mark;
-            counter++;
+            if (arr[0][2] == '3')
+            {
+                arr[0][2] = 'O';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
+        }
+        else
+        {
+            if (arr[0][2] == '3')
+            {
+                arr[0][2] = 'X';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
         }
         break;
     case 4:
-        if (game[1][0] == '4')
+        if (counter % 2 == 0)
         {
-            game[1][0] = mark;
-            counter++;
+            if (arr[1][0] == '4')
+            {
+                arr[1][0] = 'O';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
+        }
+        else
+        {
+            if (arr[1][0] == '4')
+            {
+                arr[1][0] = 'X';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
         }
         break;
     case 5:
-        if (game[1][1] == '5')
+        if (counter % 2 == 0)
         {
-            game[1][1] = mark;
-            counter++;
+            if (arr[1][1] == '5')
+            {
+                arr[1][1] = 'O';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
+        }
+        else
+        {
+            if (arr[1][1] == '5')
+            {
+                arr[1][1] = 'X';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
         }
         break;
     case 6:
-        if (game[1][2] == '6')
+        if (counter % 2 == 0)
         {
-            game[1][2] = mark;
-            counter++;
+            if (arr[1][2] == '6')
+            {
+                arr[1][2] = 'O';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
+        }
+        else
+        {
+            if (arr[1][2] == '6')
+            {
+                arr[1][2] = 'X';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
         }
         break;
     case 7:
-        if (game[2][0] == '7')
+        if (counter % 2 == 0)
         {
-            game[2][0] = mark;
-            counter++;
+            if (arr[2][0] == '7')
+            {
+                arr[2][0] = 'O';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
+        }
+        else
+        {
+            if (arr[2][0] == '7')
+            {
+                arr[2][0] = 'X';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
         }
         break;
     case 8:
-        if (game[2][1] == '8')
+        if (counter % 2 == 0)
         {
-            game[2][1] = mark;
-            counter++;
+            if (arr[2][1] == '8')
+            {
+                arr[2][1] = 'O';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
+        }
+        else
+        {
+            if (arr[2][1] == '8')
+            {
+                arr[2][1] = 'X';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
         }
         break;
     case 9:
-        if (game[2][2] == '9')
+        if (counter % 2 == 0)
         {
-            game[2][2] = mark;
-            counter++;
+            if (arr[2][2] == '9')
+            {
+                arr[2][2] = 'O';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
+        }
+        else
+        {
+            if (arr[2][2] == '9')
+            {
+                arr[2][2] = 'X';
+            }
+            else
+            {
+                cout << "Choice Different No" << "\n";
+                counter--;
+            }
         }
         break;
     }
 }
+
 void cheack()
 {
+    if (arr[0][0] == 'O' && arr[0][1] == 'O' && arr[0][2] == 'O')
+    {
+        cout << "Player 1" << " " << p1 << " " << "Wins" << "\n";
+        counter = 10;
+    } // R
+    if (arr[0][0] == 'X' && arr[0][1] == 'X' && arr[0][2] == 'X')
+    {
+        cout << "Player 2" << " " << p2 << " " << "Wins" << "\n";
+        counter = 10;
+    }
 
-    cout << "Checking";
+    if (arr[1][0] == 'O' && arr[1][1] == 'O' && arr[1][2] == 'O')
+    {
+        cout << "Player 1" << " " << p1 << " " << "Wins" << "\n";
+        counter = 10;
+    }
+    if (arr[1][0] == 'X' && arr[1][1] == 'X' && arr[1][2] == 'X')
+    {
+        cout << "Player 2" << " " << p2 << " " << "Wins" << "\n";
+        counter = 10;
+    }
 
-    if (game[0][0] == 'X' && game[0][1] == 'X' && game[0][2] == 'X') // 1
+    if (arr[2][0] == 'O' && arr[2][1] == 'O' && arr[2][2] == 'O')
     {
-        if (counter % 2 != 0)
-        {
-            cout << p1 << "--Wins--";
-        }
-        else
-        {
-            cout << p2 << "--Wins--";
-        }
-        return;
+        cout << "Player 1" << " " << p1 << " " << "Wins" << "\n";
+        counter = 10;
     }
-    if (game[0][0] == 'O' && game[0][1] == 'O' && game[0][2] == 'O') // 1
+    if (arr[2][0] == 'X' && arr[2][1] == 'X' && arr[2][2] == 'X')
     {
-        if (counter % 2 != 0)
-        {
-            cout << p1 << "--Wins--";
-        }
-        else
-        {
-            cout << p2 << "--Wins--";
-        }
-        return;
+        cout << "Player 2" << " " << p2 << " " << "Wins" << "\n";
+        counter = 10;
     }
-    else if (game[1][0] == 'X' && game[1][1] == 'X' && game[1][2] == 'X') // 2
+
+    if (arr[0][0] == 'O' && arr[1][0] == 'O' && arr[2][0] == 'O')
     {
-        if (counter % 2 != 0)
-        {
-            cout << p1 << "--Wins--";
-        }
-        else
-        {
-            cout << p2 << "--Wins--";
-        }
-        return;
-    }
-    else if (game[2][0] == game[2][1] == game[2][2]) // 3
+        cout << "Player 1" << " " << p1 << " " << "Wins" << "\n";
+        counter = 10;
+    } // C
+    if (arr[0][0] == 'X' && arr[1][0] == 'X' && arr[2][0] == 'X')
     {
-        if (counter % 2 != 0)
-        {
-            cout << p1 << "--Wins--";
-        }
-        else
-        {
-            cout << p2 << "--Wins--";
-        }
-        return;
+        cout << "Player 2" << " " << p2 << " " << "Wins" << "\n";
+        counter = 10;
     }
-    else if (game[0][0] == game[1][0] == game[2][0]) // 4
+
+    if (arr[0][1] == 'O' && arr[1][1] == 'O' && arr[2][1] == 'O')
     {
-        if (counter % 2 != 0)
-        {
-            cout << p1 << "--Wins--";
-        }
-        else
-        {
-            cout << p2 << "--Wins--";
-        }
-        return;
+        cout << "Player 1" << " " << p1 << " " << "Wins" << "\n";
+        counter = 10;
     }
-    else if (game[0][1] == game[1][1] == game[2][1]) // 5
+    if (arr[0][1] == 'X' && arr[1][1] == 'X' && arr[2][1] == 'X')
     {
-        if (counter % 2 != 0)
-        {
-            cout << p1 << "--Wins--";
-        }
-        else
-        {
-            cout << p2 << "--Wins--";
-        }
-        return;
+        cout << "Player 2" << " " << p2 << " " << "Wins" << "\n";
+        counter = 10;
     }
-    else if (game[0][2] == game[1][2] == game[2][2]) // 6
+
+    if (arr[0][2] == 'O' && arr[1][2] == 'O' && arr[2][2] == 'O')
     {
-        if (counter % 2 != 0)
-        {
-            cout << p1 << "--Wins--";
-        }
-        else
-        {
-            cout << p2 << "--Wins--";
-        }
-        return;
+        cout << "Player 1" << " " << p1 << " " << "Wins" << "\n";
+        counter = 10;
     }
-    else if (game[0][0] == game[1][1] == game[2][2]) // 7
+    if (arr[0][2] == 'X' && arr[1][2] == 'X' && arr[2][2] == 'X')
     {
-        if (counter % 2 != 0)
-        {
-            cout << p1 << "--Wins--";
-        }
-        else
-        {
-            cout << p2 << "--Wins--";
-        }
-        return;
+        cout << "Player 2" << " " << p2 << " " << "Wins" << "\n";
+        counter = 10;
     }
-    else if (game[2][0] == game[1][1] == game[0][1]) // 8
+
+    if (arr[0][0] == 'O' && arr[1][1] == 'O' && arr[2][2] == 'O')
     {
-        if (counter % 2 != 0)
-        {
-            cout << p1 << "--Wins--";
-        }
-        else
-        {
-            cout << p2 << "--Wins--";
-        }
-        return;
+        cout << "Player 1" << " " << p1 << " " << "Wins" << "\n";
+        counter = 10;
+    } // D
+    if (arr[0][0] == 'X' && arr[1][1] == 'X' && arr[2][2] == 'X')
+    {
+        cout << "Player 2" << " " << p2 << " " << "Wins" << "\n";
+        counter = 10;
     }
-    return;
+
+    if (arr[0][2] == 'O' && arr[1][1] == 'O' && arr[2][0] == 'O')
+    {
+        cout << "Player 1" << " " << p1 << " " << "Wins" << "\n";
+        counter = 10;
+    }
+    if (arr[0][2] == 'X' && arr[1][1] == 'X' && arr[2][0] == 'X')
+    {
+        cout << "Player 2" << " " << p2 << " " << "Wins" << "\n";
+        counter = 10;
+    }
 }
+
 int main()
 {
-    cout << "----Tik-Tac-Toe----";
-    cout << "\n";
-    cout << "\n";
-    cout << "Enter The Player 1 Name" << "\n";
+
+    cout << "Enter The 1 Player Name" << "\n";
     cin >> p1;
-    cout << "\n";
-    cout << "Enter The Player 2 Name" << "\n";
+    cout << "Enter The 2 Player Name" << "\n";
     cin >> p2;
+    cout << "---TIK-TAK-TOE---";
     cout << "\n";
-    cout << "\n";
-    cout << "Press Any Key To Start" << "\n";
-    char ch;
-    cin >> ch;
-    // system("cls");
+    display();
     while (counter < 9)
     {
-        // system("cls");
-        display();
-        int inp;
         if (counter % 2 == 0)
         {
-            cout << p1 << "'s Chance(O)" << "\n";
+            cout << p1 << "'s Chance (O)" << "\n";
             cin >> inp;
-            tick(inp, 'O');
+            generat(inp);
+            cheack();
+            display();
         }
         else
         {
             cout << p2 << "'s Chance(X)" << "\n";
             cin >> inp;
-            tick(inp, 'X');
+            generat(inp);
+            cheack();
+            display();
         }
-        cheack();
+        counter++;
+    }
+    if (counter == 9)
+    {
+        cout << "TIE";
     }
 }
