@@ -12,7 +12,7 @@ void count_sort(int arr[], int n)
     {
         count[arr[i]]++;
     }
-    for (int i = 1; i < mx + 1; i++)
+    for (int i = 1; i <= mx; i++)
     {
         count[i] += count[i - 1];
     }
