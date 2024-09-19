@@ -5,6 +5,8 @@
         "ostream": "cpp",
         "bitset": "cpp",
         "chrono": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "typeindex": "cpp",
+        "typeinfo": "cpp"
     }
 }
