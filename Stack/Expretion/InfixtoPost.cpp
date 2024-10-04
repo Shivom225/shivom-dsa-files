@@ -45,9 +45,9 @@ string intop(string str)
         }
         else
         {
-            while (!st.empty() && pre(st.top()) > pre(str[i]))
+            while (!st.empty() && pre(st.top()) >= pre(str[i]))
             {
-                ans += str[i];
+                ans += st.top();
                 st.pop();
             }
             st.push(str[i]);
