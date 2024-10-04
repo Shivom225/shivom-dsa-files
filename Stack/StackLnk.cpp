@@ -34,13 +34,15 @@ public:
         }
 
         top->next = n;
-        top = top->next;
+        top = n;
     }
     void pop()
     {
         if (head == top)
         {
-            delete head;
+            Node *del = head;
+            top = top->prev;
+            head = NULL;
             return;
         }
         top = top->prev;
@@ -67,8 +69,6 @@ int main()
     st.push(head, 2);
     st.push(head, 3);
     st.push(head, 4);
-    st.pop();
-    cout << st.topp();
     st.pop();
     cout << st.topp();
     //     while (!st.empty())
